@@ -1,9 +1,7 @@
 package com.zerobase.order.controller;
 
 import com.zerobase.domain.config.JwtAuthenticationProvider;
-import com.zerobase.order.domain.product.AddProductForm;
-import com.zerobase.order.domain.product.AddProductItemForm;
-import com.zerobase.order.domain.product.ProductDto;
+import com.zerobase.order.domain.product.*;
 import com.zerobase.order.service.ProductItemService;
 import com.zerobase.order.service.ProductService;
 import lombok.RequiredArgsConstructor;
@@ -34,6 +32,24 @@ public class SellerProductController {
 
         return ResponseEntity.ok(ProductDto.from(
                 productItemService.addProductItem(jwtAuthenticationProvider.getUserVo(token).getId(), form))
+        );
+    }
+
+    @PutMapping
+    public ResponseEntity<ProductDto> updateProduct(@RequestHeader("X-AUTH-TOKEN") String token,
+                                                    @RequestBody UpdateProductForm form) {
+
+        return ResponseEntity.ok(ProductDto.from(
+                productService.updateProduct(jwtAuthenticationProvider.getUserVo(token).getId(), form))
+        );
+    }
+
+    @PutMapping("/item")
+    public ResponseEntity<ProductItemDto> updateProductItem(@RequestHeader("X-AUTH-TOKEN") String token,
+                                                            @RequestBody UpdateProductItemForm form) {
+
+        return ResponseEntity.ok(ProductItemDto.from(
+                productItemService.updateProductItem(jwtAuthenticationProvider.getUserVo(token).getId(), form))
         );
     }
 
