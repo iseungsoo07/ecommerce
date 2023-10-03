@@ -21,7 +21,7 @@ Content-Type: application/json
 X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI4c2NoQ1ZDd0JYL1RjaTQ4bkVNUlNHc255SzVlTmkvSUlNR3V1Q3g4bm93PSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjk2MzI4OTQ3LCJleHAiOjE2OTY0MTUzNDd9.wsypELMY2j5LHuTXTusxj0uteyDX9tXqu7VhfbGJIp0
 
 {
-    "productId": 1,
+    "productId": 2,
     "count": 1,
     "name": "280",
     "price": 100000
@@ -48,6 +48,38 @@ X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI4c2NoQ1ZDd0JYL1RjaTQ4bkVNUlNHc255S
 
 ### 상품 아이템 수정
 PUT http://localhost:8081/seller/product/item
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI4c2NoQ1ZDd0JYL1RjaTQ4bkVNUlNHc255SzVlTmkvSUlNR3V1Q3g4bm93PSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjk2MzI4OTQ3LCJleHAiOjE2OTY0MTUzNDd9.wsypELMY2j5LHuTXTusxj0uteyDX9tXqu7VhfbGJIp0
+
+{
+    "id": 1,
+    "productId": 1,
+    "count": 1,
+    "name": "280",
+    "price": 140000
+}
+
+### 상품 삭제
+DELETE http://localhost:8081/seller/product?id=2
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI4c2NoQ1ZDd0JYL1RjaTQ4bkVNUlNHc255SzVlTmkvSUlNR3V1Q3g4bm93PSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjk2MzI4OTQ3LCJleHAiOjE2OTY0MTUzNDd9.wsypELMY2j5LHuTXTusxj0uteyDX9tXqu7VhfbGJIp0
+
+{
+    "description": "상품 설명",
+    "items": [
+        {
+            "id": 1,
+            "count": 1,
+            "name": "280",
+            "price": 100000
+        }
+    ],
+    "id": 1,
+    "name": "나이키 에어포스 한정판"
+}
+
+### 상품 아이템 삭제
+DELETE http://localhost:8081/seller/product/item?id=2
 Content-Type: application/json
 X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI4c2NoQ1ZDd0JYL1RjaTQ4bkVNUlNHc255SzVlTmkvSUlNR3V1Q3g4bm93PSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjk2MzI4OTQ3LCJleHAiOjE2OTY0MTUzNDd9.wsypELMY2j5LHuTXTusxj0uteyDX9tXqu7VhfbGJIp0
 
