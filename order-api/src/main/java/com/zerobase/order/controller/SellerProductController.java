@@ -53,5 +53,21 @@ public class SellerProductController {
         );
     }
 
+    @DeleteMapping
+    public ResponseEntity<Void> deleteProduct(@RequestHeader("X-AUTH-TOKEN") String token,
+                                              @RequestParam Long id) {
+
+        productService.deleteProduct(jwtAuthenticationProvider.getUserVo(token).getId(), id);
+        return ResponseEntity.ok().build();
+    }
+
+    @DeleteMapping("/item")
+    public ResponseEntity<Void> updateProductItem(@RequestHeader("X-AUTH-TOKEN") String token,
+                                                  @RequestParam Long id) {
+
+        productItemService.deleteProductItem(jwtAuthenticationProvider.getUserVo(token).getId(), id);
+        return ResponseEntity.ok().build();
+    }
+
 
 }
