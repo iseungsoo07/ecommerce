@@ -1,0 +1,45 @@
+### 회원가입 (고객)
+POST http://localhost:8080/signup/customer
+Content-Type: application/json
+
+{
+    "birth": "1998-05-07",
+    "email": "ixeungxoo07@gmail.com",
+    "name": "iss07",
+    "password": "pw",
+    "phone:": "01000000000"
+}
+
+### 이메일 인증 (고객)
+GET http://localhost:8080/signup/customer/verify?email=ixeungxoo07@gmail.com&code=46nBsuCr44
+
+### 로그인 (고객)
+POST http://localhost:8080/signin/customer
+Content-Type: application/json
+
+{
+    "email": "ixeungxoo07@gmail.com",
+    "password": "pw"
+}
+
+### 회원 정보 조회 (고객)
+GET http://localhost:8080/customer/getInfo
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI4c2NoQ1ZDd0JYL1RjaTQ4bkVNUlNHc255SzVlTmkvSUlNR3V1Q3g4bm93PSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2OTYzMTUzODcsImV4cCI6MTY5NjQwMTc4N30.dO3kPsWLE73ROk13rzc7aW9vFvbgNhe6LwezhS4S340
+
+### 잔액 변경 (고객)
+POST http://localhost:8080/customer/balance
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI4c2NoQ1ZDd0JYL1RjaTQ4bkVNUlNHc255SzVlTmkvSUlNR3V1Q3g4bm93PSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2OTYzMTUyMTAsImV4cCI6MTY5NjQwMTYxMH0.QdEJt9Lno5A6_EuIN1o9GCuUMWKIuLtAf1DscWUX9yY
+
+{
+    "from": "server",
+    "message": "돈 충전",
+    "money": 50000
+}
+
+###########################
+
+### 회원가입 (셀러)
+
+### 로그인 (셀러)

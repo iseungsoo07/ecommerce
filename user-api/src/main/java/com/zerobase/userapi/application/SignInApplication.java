@@ -2,8 +2,6 @@ package com.zerobase.userapi.application;
 
 import com.zerobase.domain.config.JwtAuthenticationProvider;
 import com.zerobase.domain.domain.common.UserType;
-import com.zerobase.userapi.service.CustomerService;
-
 import com.zerobase.userapi.domain.SignInForm;
 import com.zerobase.userapi.domain.model.Customer;
 import com.zerobase.userapi.domain.model.Seller;

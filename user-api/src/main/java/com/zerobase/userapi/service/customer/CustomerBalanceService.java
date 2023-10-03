@@ -1,4 +1,4 @@
-package com.zerobase.userapi.service;
+package com.zerobase.userapi.service.customer;
 
 import com.zerobase.userapi.domain.customer.ChangeBalanceForm;
 import com.zerobase.userapi.domain.model.CustomerBalanceHistory;

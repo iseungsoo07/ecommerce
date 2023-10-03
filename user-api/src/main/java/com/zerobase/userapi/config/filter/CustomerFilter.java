@@ -2,7 +2,6 @@ package com.zerobase.userapi.config.filter;
 
 import com.zerobase.domain.config.JwtAuthenticationProvider;
 import com.zerobase.domain.domain.common.UserVo;
-import com.zerobase.userapi.service.CustomerService;
 import com.zerobase.userapi.service.customer.CustomerService;
 import lombok.RequiredArgsConstructor;
 
