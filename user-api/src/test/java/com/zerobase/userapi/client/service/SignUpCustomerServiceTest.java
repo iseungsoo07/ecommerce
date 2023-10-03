@@ -1,14 +1,13 @@
 package com.zerobase.userapi.client.service;
 
 import com.zerobase.userapi.domain.SignUpForm;
-import org.assertj.core.api.Assertions;
+import com.zerobase.userapi.service.customer.SignUpCustomerService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.time.LocalDate;
 
-import static org.assertj.core.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest

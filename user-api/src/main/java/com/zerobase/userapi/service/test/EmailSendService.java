@@ -1,4 +1,4 @@
-package com.zerobase.userapi.client.service.test;
+package com.zerobase.userapi.service.test;
 
 import com.zerobase.userapi.client.MailgunClient;
 import com.zerobase.userapi.client.mailgun.SendMailForm;
