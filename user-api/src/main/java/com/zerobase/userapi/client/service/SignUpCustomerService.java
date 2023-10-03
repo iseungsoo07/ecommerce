@@ -3,7 +3,7 @@ package com.zerobase.userapi.client.service;
 import com.zerobase.userapi.domain.SignUpForm;
 import com.zerobase.userapi.domain.model.Customer;
 import com.zerobase.userapi.exception.CustomException;
-import com.zerobase.userapi.repository.CustomerRepository;
+import com.zerobase.userapi.domain.repository.CustomerRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
