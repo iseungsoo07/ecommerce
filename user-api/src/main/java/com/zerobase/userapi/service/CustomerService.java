@@ -1,4 +1,4 @@
-package com.zerobase.userapi.client.service;
+package com.zerobase.userapi.service;
 
 import com.zerobase.userapi.domain.model.Customer;
 import com.zerobase.userapi.domain.repository.CustomerRepository;
