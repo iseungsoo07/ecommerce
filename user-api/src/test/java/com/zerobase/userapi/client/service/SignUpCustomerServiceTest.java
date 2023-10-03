@@ -2,6 +2,7 @@ package com.zerobase.userapi.client.service;
 
 import com.zerobase.userapi.domain.SignUpForm;
 import com.zerobase.userapi.service.SignUpCustomerService;
+import com.zerobase.userapi.service.customer.SignUpCustomerService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

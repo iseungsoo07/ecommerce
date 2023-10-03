@@ -2,8 +2,8 @@ package com.zerobase.userapi.config.filter;
 
 import com.zerobase.domain.config.JwtAuthenticationProvider;
 import com.zerobase.domain.domain.common.UserVo;
-import com.zerobase.userapi.service.CustomerService;
 import com.zerobase.userapi.service.customer.CustomerService;
+import com.zerobase.userapi.service.seller.SellerService;
 import lombok.RequiredArgsConstructor;
 
 import javax.servlet.*;
@@ -13,10 +13,10 @@ import java.io.IOException;
 
 @WebFilter(urlPatterns = "/customer/*")
 @RequiredArgsConstructor
-public class CustomerFilter implements Filter {
+public class SellerFilter implements Filter {
 
     private final JwtAuthenticationProvider jwtAuthenticationProvider;
-    private final CustomerService customerService;
+    private final SellerService sellerService;
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
@@ -28,7 +28,7 @@ public class CustomerFilter implements Filter {
         }
 
         UserVo vo = jwtAuthenticationProvider.getUserVo(token);
-        customerService.findByIdAndEmail(vo.getId(), vo.getEmail())
+        sellerService.findByIdAndEmail(vo.getId(), vo.getEmail())
                 .orElseThrow(() -> new ServletException("Invalid access"));
 
         chain.doFilter(request, response);
