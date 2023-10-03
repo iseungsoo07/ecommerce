@@ -6,7 +6,7 @@ import com.zerobase.userapi.domain.customer.ChangeBalanceForm;
 import com.zerobase.userapi.domain.customer.CustomerDto;
 import com.zerobase.userapi.domain.model.Customer;
 import com.zerobase.userapi.exception.CustomException;
-import com.zerobase.userapi.service.CustomerBalanceService;
+import com.zerobase.userapi.service.customer.CustomerBalanceService;
 import com.zerobase.userapi.service.customer.CustomerService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
