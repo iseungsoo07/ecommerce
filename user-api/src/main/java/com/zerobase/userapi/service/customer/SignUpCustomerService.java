@@ -1,4 +1,4 @@
-package com.zerobase.userapi.client.service;
+package com.zerobase.userapi.service.customer;
 
 import com.zerobase.userapi.domain.SignUpForm;
 import com.zerobase.userapi.domain.model.Customer;
