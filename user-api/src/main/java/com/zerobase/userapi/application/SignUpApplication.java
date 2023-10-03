@@ -2,6 +2,8 @@ package com.zerobase.userapi.application;
 
 import com.zerobase.userapi.client.MailgunClient;
 import com.zerobase.userapi.client.mailgun.SendMailForm;
+import com.zerobase.userapi.service.SignUpCustomerService;
+
 import com.zerobase.userapi.domain.SignUpForm;
 import com.zerobase.userapi.domain.model.Customer;
 import com.zerobase.userapi.domain.model.Seller;
