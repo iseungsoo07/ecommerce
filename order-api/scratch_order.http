@@ -98,3 +98,23 @@ Content-Type: application/json
 ### 상품 디테일 검색
 GET http://localhost:8081/search/product/detail?productId=1
 Content-Type: application/json
+
+### 카트 추가
+POST http://localhost:8081/customer/cart
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI4c2NoQ1ZDd0JYL1RjaTQ4bkVNUlNHc255SzVlTmkvSUlNR3V1Q3g4bm93PSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2OTYzMTUzODcsImV4cCI6MTY5NjQwMTc4N30.dO3kPsWLE73ROk13rzc7aW9vFvbgNhe6LwezhS4S340
+
+{
+    "description": "상품 설명",
+    "id": 1,
+    "items": [
+        {
+            "count": 1,
+            "id": 1,
+            "name": "270",
+            "price": 100000
+        }
+    ],
+    "name": "나이키 에어포스3",
+    "sellerId": 1
+}
