@@ -22,4 +22,9 @@ public class CustomerCartController {
         return ResponseEntity.ok(cartApplication.addCart(jwtAuthenticationProvider.getUserVo(token).getId(), form));
     }
 
+    @GetMapping
+    public ResponseEntity<Cart> showCart(@RequestHeader(name = "X-AUTH-TOEN") String token) {
+        return ResponseEntity.ok(cartApplication.getCart(jwtAuthenticationProvider.getUserVo(token).getId()));
+    }
+
 }
